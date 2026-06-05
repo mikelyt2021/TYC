@@ -631,7 +631,7 @@ a {
     padding: 0;
     color: #fff;
     background: transparent;
-    border-radius: var(--radius);
+    border-radius: 0;
     cursor: pointer;
     overflow: hidden;
 }
@@ -712,30 +712,16 @@ a {
 }
 
 .space-cover {
-    background: var(--violet);
+    color: var(--ink);
+    background: transparent;
 }
 
 .space-cover::before {
-    content: "";
-    position: absolute;
-    top: 42px;
-    right: 42px;
-    width: 58px;
-    aspect-ratio: 1;
-    background: var(--yellow);
-    border-radius: 50%;
+    display: none;
 }
 
 .space-cover::after {
-    content: "";
-    position: absolute;
-    top: 132px;
-    left: 44px;
-    width: 16px;
-    aspect-ratio: 1;
-    background: #fff;
-    border-radius: 50%;
-    opacity: 0.8;
+    display: none;
 }
 
 .space-cover {
@@ -760,8 +746,8 @@ a {
     z-index: 1;
     align-self: flex-start;
     padding: 6px 10px;
-    color: var(--ink);
-    background: #fff;
+    color: #fff;
+    background: var(--violet);
     border-radius: 999px;
     font-size: 13px;
     font-weight: 800;
