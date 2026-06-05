@@ -471,6 +471,14 @@ a {
     font-weight: 900;
 }
 
+.creator-photo {
+    display: block;
+    width: 68px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
 .creator-profile:nth-child(2) .creator-mark {
     background: var(--coral);
 }
@@ -622,7 +630,7 @@ a {
     gap: 0;
     padding: 0;
     color: #fff;
-    background: #f6f4ef;
+    background: transparent;
     border-radius: var(--radius);
     cursor: pointer;
     overflow: hidden;
@@ -631,7 +639,7 @@ a {
 .image-cover {
     min-height: 0;
     padding: 0;
-    background: #f6f4ef;
+    background: transparent;
 }
 
 .book-cover-image {
