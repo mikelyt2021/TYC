@@ -409,18 +409,80 @@ a {
 }
 
 .character-card {
+    position: relative;
     overflow: hidden;
     background: transparent;
     border: 0;
     border-radius: 0;
 }
 
+.character-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.character-trigger:focus-visible {
+    outline: 3px solid rgba(111, 75, 216, 0.32);
+    outline-offset: 4px;
+}
+
 .character-image {
     display: block;
     width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1;
     border-radius: var(--radius);
     object-fit: cover;
+}
+
+.character-popover {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    z-index: 2;
+    padding: 14px;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(230, 226, 218, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 18px 44px rgba(32, 34, 50, 0.18);
+    backdrop-filter: blur(12px);
+}
+
+.character-popover[hidden] {
+    display: none;
+}
+
+.character-popover h3 {
+    margin-bottom: 6px;
+    font-size: 18px;
+}
+
+.character-popover p {
+    margin-bottom: 10px;
+    color: var(--teal);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.character-popover a {
+    display: block;
+    padding: 8px 0;
+    color: var(--violet);
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.character-popover a + a {
+    border-top: 1px solid var(--line);
 }
 
 .mikel .character-image {
@@ -607,7 +669,7 @@ a {
     overflow: hidden;
     background: transparent;
     border: 0;
-    border-radius: 0;
+    border-radius: var(--radius);
     scroll-snap-align: start;
 }
 
@@ -631,7 +693,7 @@ a {
     padding: 0;
     color: #fff;
     background: transparent;
-    border-radius: 0;
+    border-radius: var(--radius);
     cursor: pointer;
     overflow: hidden;
 }
@@ -649,6 +711,7 @@ a {
     height: 100%;
     margin: 0 auto;
     object-fit: contain;
+    border-radius: var(--radius);
 }
 
 .detail-toggle {
